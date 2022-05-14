@@ -16,13 +16,14 @@ namespace GamesStore
         public Genre Gen { get; set; }
         public Plataform Plat { get; set; }
 
-        public Game(int id, string name, Genre gen, Plataform plat, string description)
+        public Game(int id, string name, string description, Genre gen, Plataform plat)
         {
             Id = id;
             Name = name;
+            Description = description;
             Gen = gen;
             Plat = plat;
-            Description = description;
+            
         }
         public Game()
         {
@@ -33,15 +34,13 @@ namespace GamesStore
             Plat = Plataform.All;
         }
 
-        
-
         public int Id
         {
             get { return _id; }
             set
             {
                 if (value > 0) _id = value;
-                else throw new Exception("Value invalid");
+                else throw new Exception("Only positive numbers");
             }
         }
 
