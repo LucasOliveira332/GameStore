@@ -59,7 +59,7 @@ namespace GamesStore
 
         public override string ToString()
         {
-            return $"{Id},{Name},{Description}, {Gen}, {Plat}";
+            return $"Id: {Id},Name: {Name}, Description: {Description}, Genre: {Gen}, Platform: {Plat}";
         }
 
 
